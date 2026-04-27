@@ -8,6 +8,9 @@ class GeminiTextBlock:
         self.text = text
         self.type = "text"
 
+    def __str__(self):
+        return self.text
+
 class GeminiToolUseBlock:
     def __init__(self, id: str, name: str, input: dict):
         self.id = id
