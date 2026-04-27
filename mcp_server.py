@@ -70,7 +70,7 @@ The id of the document you need to reformat is:
 </document_id>
 
 Add in headers, bullet points, tables, etc as necessary. Feel free to add in structure.
-Use the 'edit_document' tool to edit the document. After the document has been reformatted, use the 'read_doc_contents' tool to display the full, updated content of the document.
+Use the 'edit_document' tool to edit the document. After the document has been reformatted, use the 'read_doc_contents' tool to retrieve the updated content, then output that content directly in your final reply.
 """
     return [base.UserMessage(prompt)]
 
