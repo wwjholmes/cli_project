@@ -54,7 +54,6 @@ def fetch_doc(doc_id: str) -> str:
         raise ValueError(f"Doc with id {doc_id} not found")
     return docs[doc_id]
 
-# TODO: Write a prompt to rewrite a doc in markdown format
 @mcp.prompt(
     name="format",
     description="Rewrite the contents of a document in Markdown format."
@@ -71,7 +70,7 @@ The id of the document you need to reformat is:
 </document_id>
 
 Add in headers, bullet points, tables, etc as necessary. Feel free to add in structure.
-Use the 'edit_document' tool to edit the document. After the document has been reformatted...
+Use the 'edit_document' tool to edit the document. After the document has been reformatted, use the 'read_doc_contents' tool to display the full, updated content of the document.
 """
     return [base.UserMessage(prompt)]
 
